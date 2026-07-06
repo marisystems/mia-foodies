@@ -1,2 +1,2 @@
-# mia-odin-restaurant-page
+# mia-foodies
 Repository for The odin project Restaurant page
