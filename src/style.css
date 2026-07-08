@@ -1,0 +1,73 @@
+@font-face {
+    font-family: ChochoAura;
+    src: url(./fonts/Chocho-Aura-Demo.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+    padding: 80px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #464545;
+    font-family: ChochoAura;
+}
+
+.menus {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menus button {
+    position: relative;
+
+    background: none;
+    border: none;
+
+    transition: all 0.2s;
+}
+
+.menus button:hover { 
+    transform: scale(1.1);
+    
+}
+
+.info {
+    position: relative;
+    top: 15px;
+}
+
+.foodies {
+    position: relative;
+    top: 15px;
+}
+
+/* Modals */
+
+.food-menu {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    width: 50vw;
+    height: 80vh;
+    padding: 20px;
+}
+
+.food-menu[open] {
+    opacity: 1;
+}
