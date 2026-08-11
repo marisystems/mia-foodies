@@ -3,6 +3,11 @@
     src: url(./fonts/Chocho-Aura-Demo.ttf);
 }
 
+@font-face {
+    font-family: TTNorms-Black;
+    src: url(./fonts/TTNorms-Black.otf);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
 * {
@@ -26,7 +31,7 @@ body {
 
 h1,
 h2 {
-    font-family: ChochoAura;
+    font-family: TTNorms-Black;
 }
 
 h1 {
@@ -148,4 +153,28 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+/* My Info section */
+
+.info-wrapper {
+    align-items: center;
+}
+
+.info-text {
+    padding: 0px 100px;
+}
+
+.info-container {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.info-git, .info-link {
+    width: 20px;
+}
+
+.info-img {
+    width: 70%;
 }

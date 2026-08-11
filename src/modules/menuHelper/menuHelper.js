@@ -21,6 +21,7 @@ function createEntry(name, price, target) {
     target.append(menuEntry);
 }
 
+// Function to create each section on the menu
 function createSection(name, target, logoShow=false) {
     const section = document.createElement("div");
     section.classList.add("menu-section");
@@ -46,7 +47,7 @@ function createSection(name, target, logoShow=false) {
 }
 
 function createMenu() {
-    // Dialog
+    // This dialog is what is going to be exported from each module
     const dialog = document.createElement("dialog");
     dialog.classList.add("menu");
     
