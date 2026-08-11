@@ -1,10 +1,36 @@
-// Create html structure
+import {
+    createEntry, 
+    createSection, 
+    createMenu,
+} from '../menuHelper/menuHelper.js'
 
-const dialog = document.createElement("dialog");
-dialog.classList.add("drink-menu");
-const wrapper = document.createElement("div");
-wrapper.classList.add("wrapper");
+// Create the menu
+const menu = createMenu();
+const wrapper = menu[0];
+const dialog = menu[1];
+const closeButton = menu[2];
 
-dialog.appendChild(wrapper);
+// Bread Section
+const coffee = document.createElement("div");
+coffee.classList.add("menu-entries");
+createSection("Coffee", wrapper, true)
+createEntry("Foccacia bread", 25, coffee);
+createEntry("Foccacia bread", 25, coffee);
+createEntry("Foccacia bread", 25, coffee);
+wrapper.append(coffee);
 
-export default dialog
+// Pastry Section
+const tea = document.createElement("div");
+tea.classList.add("menu-entries");
+createSection("Tea", wrapper, false);
+createEntry("Foccacia bread", 25, tea);
+createEntry("Foccacia bread", 25, tea);
+createEntry("Foccacia bread", 25, tea);
+wrapper.append(tea)
+
+// Event listener for close buton
+closeButton.addEventListener("click", () => {
+    dialog.close()
+})
+
+export default dialog;

@@ -1,38 +1,38 @@
 // Create html structure
-import closeButtonImg from './close.png';
-import bnuuy from './bnuyy-avental.png';
+import {
+    createEntry, 
+    createSection, 
+    createMenu,
+} from '../menuHelper/menuHelper.js'
 
-function createEntry() {
+// Create the menu
+const menu = createMenu();
+const wrapper = menu[0];
+const dialog = menu[1];
+const closeButton = menu[2];
 
-}
+// Bread Section
+const bread = document.createElement("div");
+bread.classList.add("menu-entries");
+createSection("Bread", wrapper, true)
+createEntry("Foccacia", 15, bread);
+createEntry("Baguette", 15, bread);
+createEntry("Rye", 15, bread);
+createEntry("Sourdough", 25, bread);
+wrapper.append(bread);
 
-// Dialog
-const dialog = document.createElement("dialog");
-dialog.classList.add("food-menu");
+// Pastry Section
+const pastry = document.createElement("div");
+pastry.classList.add("menu-entries");
+createSection("Pastry", wrapper, false);
+createEntry("Sweet Potato Pie", 30, pastry);
+createEntry("Croissant", 12, pastry);
+createEntry("Macaron", 25, pastry);
+wrapper.append(pastry)
 
-// Wrapper
-const wrapper = document.createElement("div");
-wrapper.classList.add("foodies-wrapper");
+// Event listener for close buton
+closeButton.addEventListener("click", () => {
+    dialog.close()
+})
 
-// Close button
-const closeButton = document.createElement("img");
-closeButton.src = closeButtonImg;
-closeButton.width = '30'
-closeButton.classList.add("close-menu")
-
-// Bread
-const section = document.createElement("div");
-section.classList.add("bread");
-const sectionHeader = document.createElement("h2")
-sectionHeader.textContent = "Bread";
-section.appendChild(sectionHeader)
-
-// Bnuuy
-const logo = document.createElement("img");
-logo.src = bnuuy;
-logo.width = '100';
-
-wrapper.append(closeButton, section, logo);
-dialog.appendChild(wrapper);
-
-export default dialog
+export default dialog;

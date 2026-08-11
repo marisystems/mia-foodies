@@ -1,5 +1,5 @@
 // This is a module that will take all the modules
-// and append it to the body
+// and append it to a target
 
 function pageLoad(modules, target) {
     modules.forEach( (element) => {
